@@ -129,8 +129,8 @@ dmypy.json
 .pyre/
 
 data/**
-!data
+!data/README.txt
 db/**
-!db
+!db/README.txt
 temp/**
-!temp
+!temp/README.txt
