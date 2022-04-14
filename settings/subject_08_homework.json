@@ -1,0 +1,20 @@
+{
+  "dir_path": "data/row_subject_08_homework",
+  "subject": {
+    "id": "08_homework",
+    "title": "第8回_課題"
+  },
+  "required_issue_count": 1,
+  "issues": [
+    {
+      "id": "08_issue1",
+      "title": "08_issue1",
+      "filename_regex": ".*.c",
+      "check_code": {
+        "stdin": ["600", "0"],
+        "exclude": ["\n", " ", "　"],
+        "stdout_regex": ".*400.*1600"
+      }
+    }
+  ]
+}

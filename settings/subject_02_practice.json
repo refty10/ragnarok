@@ -1,0 +1,63 @@
+{
+  "dir_path": "data/row_subject_02_practice",
+  "subject": {
+    "id": "02_practice",
+    "title": "第2回_演習問題"
+  },
+  "required_issue_count": 6,
+  "issues": [
+    {
+      "id": "02_01",
+      "title": "helloWorld",
+      "filename_regex": ".*_01.*.c",
+      "check_code": {
+        "stdout_regex": "."
+      }
+    },
+    {
+      "id": "02_02",
+      "title": "sharp",
+      "filename_regex": ".*_02.*.c",
+      "check_code": {
+        "exclude": ["\n", " ", "　"],
+        "stdout_regex": ".*#{20}.*"
+      }
+    },
+    {
+      "id": "02_03",
+      "title": "sharpA",
+      "filename_regex": ".*_03.*.c",
+      "check_code": {
+        "exclude": ["\n", " ", "　"],
+        "stdout_regex": ".*#{14}.*"
+      }
+    },
+    {
+      "id": "02_04",
+      "title": "lineA",
+      "filename_regex": ".*_04.*.c",
+      "check_code": {
+        "exclude": ["\n", " ", "　"],
+        "stdout_regex": "\\*\\/\\\\\\/\\\\\\/-{5}\\\\\\/\\\\"
+      }
+    },
+    {
+      "id": "02_05",
+      "title": "add",
+      "filename_regex": ".*_05.*.c",
+      "check_code": {
+        "exclude": ["\n", " ", "　"],
+        "stdout_regex": ".*2.*\\+.*3.*=.*5.*"
+      }
+    },
+    {
+      "id": "02_06",
+      "title": "sub",
+      "filename_regex": ".*_06.*.c",
+      "check_code": {
+        "exclude": ["\n", " ", "　"],
+        "stdout_regex": ".*5.*-.*3.*=.*2.*"
+      }
+    }
+  ]
+}

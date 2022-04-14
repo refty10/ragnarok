@@ -1,0 +1,19 @@
+{
+  "dir_path": "data/row_subject_02_homework",
+  "subject": {
+    "id": "02_homework",
+    "title": "第2回_課題"
+  },
+  "required_issue_count": 1,
+  "issues": [
+    {
+      "id": "02_issue2",
+      "title": "02_issue2",
+      "filename_regex": ".*.c",
+      "check_code": {
+        "exclude": ["\n", " ", "　", "あまり", "余り"],
+        "stdout_regex": ".*5.*/|%|％|÷.*3.*=.*1.*2.*"
+      }
+    }
+  ]
+}
