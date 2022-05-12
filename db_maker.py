@@ -16,7 +16,7 @@ def run():
     db.create_table_subjects()
     db.create_table_issues()
     db.create_table_submits()
-    db.create_table_scores()
+    db.create_table_ratings()
     # Insert students
     for student in csv[["学籍番号", "学生氏名"]].values:
         student[0] = student[0].lower()
