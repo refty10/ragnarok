@@ -102,6 +102,6 @@ def run_c_code(input):
         input=input,
         text=True,
         encoding='UTF-8',
-        timeout=3,
+        timeout=10,
         stdout=subprocess.PIPE,
     )

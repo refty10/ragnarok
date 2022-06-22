@@ -1,0 +1,30 @@
+{
+  "dir_path": "data/2022_08_homework",
+  "subject": {
+    "id": "08_homework",
+    "title": "第8回_課題"
+  },
+  "required_issue_count": 1,
+  "issues": [
+    {
+      "id": "08_issue1",
+      "title": "08_issue1",
+      "filename_regex": ".*08_issue1.*.c",
+      "check_code": {
+        "stdin": ["900", "-200", "0"],
+        "exclude": ["\n", " ", "　"],
+        "stdout_regex": ".*amount.*銀行.*100.*財布.*1900.*amount.*銀行.*300.*財布.*1700.*amount.*取引終了.*"
+      }
+    },
+    {
+      "id": "08_challenge",
+      "title": "08_challenge",
+      "filename_regex": ".*08_challenge.*.c",
+      "check_code": {
+        "stdin": ["6345"],
+        "exclude": ["　"],
+        "stdout_regex": ".*3.*.*3.*.*3.*.*5.*47.*"
+      }
+    }
+  ]
+}

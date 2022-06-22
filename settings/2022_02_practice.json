@@ -1,5 +1,5 @@
 {
-  "dir_path": "data/2021_02_practice",
+  "dir_path": "data/2022_02_practice",
   "subject": {
     "id": "02_practice",
     "title": "第2回_演習問題"
@@ -19,8 +19,8 @@
       "title": "sharp",
       "filename_regex": ".*_02.*.c",
       "check_code": {
-        "exclude": ["\n", " ", "　"],
-        "stdout_regex": ".*#{20}.*"
+        "exclude": [" ", "　"],
+        "stdout_regex": ".*(#{5}\\n){5}"
       }
     },
     {

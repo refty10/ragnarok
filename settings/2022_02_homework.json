@@ -1,5 +1,5 @@
 {
-  "dir_path": "data/2021_02_homework",
+  "dir_path": "data/2022_02_homework",
   "subject": {
     "id": "02_homework",
     "title": "第2回_課題"
@@ -11,8 +11,8 @@
       "title": "02_issue2",
       "filename_regex": ".*.c",
       "check_code": {
-        "exclude": ["\n", " ", "　", "あまり", "余り"],
-        "stdout_regex": ".*5.*/|%|％|÷.*3.*=.*1.*2.*"
+        "exclude": ["\n", " ", "　"],
+        "stdout_regex": ".*5.*\\/.*3.*=.*1.*\\.{3}.*2.*"
       }
     }
   ]
