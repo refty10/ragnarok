@@ -1,4 +1,4 @@
-# Ragnarok ver.1.0.1
+# Ragnarok ver.1.0.2
 
 [**Githab**](https://github.com/refty10/ragnarok)
 
