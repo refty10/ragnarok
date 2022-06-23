@@ -8,14 +8,30 @@ import time
 
 class IssueChecker:
     @classmethod
-    def run(self, filepass, check_code):
+    def run(self, filepath, check_code):
         # コンパイル失敗
-        if "" != (err := compile_c_code(filepass)):
+        if "" != (err := compile_c_code(filepath)):
             return {
                 "result": False,
                 "status_code": "CAN_NOT_COMPILE",
                 "output": err,
             }
+
+        if 'skip_direct_output_check' not in check_code:
+            # 出力例をそのままprintfするやつをしばくやつ
+            with open(filepath) as f:
+                code = f.read()
+                #  オプションがあった場合標準出力結果から文字を除外する
+                if 'exclude' in check_code:
+                    for char in check_code["exclude"]:
+                        code = code.replace(char, '')
+                #  正規表現にて標準出力を検証
+                if self.check_stdout(code, check_code["stdout_regex"]):
+                    return {
+                        "result": False,
+                        "status_code": "DIRECT_OUTPUT",
+                        "output": code,
+                    }
 
         # 実行チェック
         # すべての標準入力を入力
@@ -72,16 +88,16 @@ class IssueChecker:
         return True
 
 
-def compile_c_code(filepass):
+def compile_c_code(filepath):
     # 驚くべきことだが、バイナリファイルにxxxx.cという名前をつけて提出するやつがいる
     # さらに、ディレクトリに「.c」と名前をつけるやつもいるのでディレクトリかどうかも判定する
     # Cファイルであるかどうかを確認し、そうでない場合はしばく
-    if os.path.isdir(filepass):
+    if os.path.isdir(filepath):
         return "target is directory"
-    elif not "C source" in magic.from_file(filepass):
+    elif not "C source" in magic.from_file(filepath):
         return "target is not C source"
     # コンパイル
-    cmd = ["gcc", filepass]
+    cmd = ["gcc", filepath]
     proc = subprocess.run(
         cmd,
         text=True,

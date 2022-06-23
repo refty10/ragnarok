@@ -102,7 +102,8 @@ class Ragnarok:
                 "student_id": student_id
             }
             # 対象のファイルパスを取得
-            filepath = self.get_submit_filepath(issue["filename_regex"], submits)
+            filepath = self.get_submit_filepath(
+                issue["filename_regex"], submits)
             # 該当のファイルが見つからない
             if filepath is None:
                 submit_result = {
@@ -150,7 +151,7 @@ mkdir_flag = True
 for arg in sys.argv:
     if arg[-5:] == ".json":
         settings_filename = arg
-    elif arg == "-skip":
+    elif arg == "--skip":
         mkdir_flag = False
 
 ragnarok = Ragnarok(settings_filename, mkdir_flag)

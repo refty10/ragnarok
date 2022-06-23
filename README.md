@@ -1,4 +1,6 @@
-# ragnarok
+# Ragnarok ver.1.0.1
+
+[**Githab**](https://github.com/refty10/ragnarok)
 
 [**Download**](https://drive.google.com/drive/folders/16o2WW8J0-N9kyPe4jo3diD37PKiogDmX?usp=sharing)
 
@@ -76,6 +78,9 @@ K21006,Firstname name
 
 ### 採点の仕方
 
+> Moodle の設定で「提出フォルダに入れてダウンロード」をチェックを入れること
+> <img src="https://gyazo.com/da2945042da0412b6d5e619a9dafe80e.png">
+
 1. Moodle から zip ファイルをダウンロード・解凍して`./data`に保存してください（フォルダ名を`row_subject_*_*`と言った感じにリネームしておくといいです）
 2. `./settings`に`subject_*_*.json`を作成してください（設定ファイルについては後述）
 3. `python ragnarok.py subject_*_*.json`もしくは`python ragnarok.py`
@@ -129,6 +134,9 @@ K21006,Firstname name
   - コンパイルが通るが検証にパスできなかったとして加点
 - CAN_NOT_COMPILE: **+0.25**
   - 提出点として少し加点
+- DIRECT_OUTPUT: **0**
+  - printf()を用いて回答をそのまま出力している場合
+  - なめているので０点
 - NOT_SUBMITTED: **+0**
   - 提出がなかったとして加点なし
 - CAN_NOT_FIND_SOURCECODE: **+0**
@@ -317,7 +325,9 @@ subject_08_practice.json
   "check_code": {
     "stdin": ["2", "6"],
     "exclude": ["\n", " ", "　"],
-    "stdout_regex": "#{12}"
+    "stdout_regex": "#{12}",
+    // これは基本使わない↓
+    "skip_direct_output_check": true
   }
 }
 ```
@@ -328,6 +338,7 @@ subject_08_practice.json
   > できる限り、限界までゆる～い正規表現を使用してください
   > ファイルが１個とかなら`.*.c`でいいです
   > だたし、正規表現を行うファイルパスは絶対パスになるためゆるすぎるのも注意が必要です
+- **check_code**: コード検証の設定
   - **stdin**: [optional]: 標準入力が必要である場合に文字列の配列として指定してください
     > この時、指定する標準入力は順に入力した時に正常終了できるように指定を行ってください
     > ここで指定した標準入力を行ってもプログラムが正常に終了しない場合は無限ループ陥るコードを書いたものとして"INFINITE_LOOP"として処理します
@@ -335,6 +346,8 @@ subject_08_practice.json
     > 場合によっては開業コードやスペース・特定の文字列といった文字列を削除してからのほうが"stdout_regex"で指定する正規表現の指定が楽になると思います
   - **stdout_regex**: [required]: 最終的に出力される標準出力（exclude に指定がある場合、指定された文字列が削除された状態）を正規表現にて検証します
     > ここで、正規表現にマッチしない場合"WRONG_OUTPUT"として処理されます
+  - **skip_direct_output_check**: [optional]: printf()等を用いて直接回答を出力しているコード検証をスキップします。指定する場合、値は`true`を指定する。
+    > 一部の問題で「Hello, World」をそのまま出力するような特殊なケースで誤検知されてしまう場合などに使用してください。
 
 #### 正規表現を記述する際の注意点
 
@@ -388,6 +401,7 @@ JSON 内に正規表現を記述するため正規表現で使用する文字列
 | CAN_NOT_COMPILE         | False  | 該当のソースコードをコンパイルできませんでした                                    |
 | WRONG_OUTPUT            | False  | 提出されたソースコードからは、<br>正しい結果を得ることができませんした            |
 | INFINITE_LOOP           | False  | 無限ループに陥りました                                                            |
+| DIRECT_OUTPUT           | False  | ソースコード上に回答を直接出力する不正を検知しました                              |
 
 ## パッチノート
 
@@ -409,8 +423,18 @@ JSON 内に正規表現を記述するため正規表現で使用する文字列
 
 ### ver1.0.1
 
-- 起動引数にオプション「-skip」を追加
+- 起動引数にオプション「--skip」を追加
+  - make_dir の処理をスキップします
+  - 一部、手動で temp フォルダ内を修正したい場合に使用してください
 - SQL インジェクション対策を強化
 - コンパイル対象となったファイルを表示するようにしました
   - ゆるすぎる正規表現でミスが無いか確認してください
 - dir_maker を単体で操作できるコンソールを用意しました
+  - `python dir_maker filepath`で使用できます。
+
+### ver1.0.2
+
+- `DIRECT_OUTPUT`を追加しました
+  - `printf()`等で直接、回答を出力する輩をしばきます
+  - アルゴリズムとしては、出力の正規表現検証のアルゴリズムをソースコードにも適応します。
+  - 一部「Hello, World」をそのまま出力するような特殊なケース以外で、誤検知されてしまう場合、`skip_direct_output_check`オプションでこの検証を無効にすることが可能です

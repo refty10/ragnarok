@@ -11,6 +11,7 @@
       "title": "helloWorld",
       "filename_regex": ".*_01.*.c",
       "check_code": {
+        "skip_direct_output_check": true,
         "stdout_regex": "."
       }
     },

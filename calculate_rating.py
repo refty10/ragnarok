@@ -35,8 +35,10 @@ def calculate_rating(settings_filename):
                 base_point += 1
             elif submit[2] == "WRONG_OUTPUT" or submit[2] == "INFINITE_LOOP":
                 base_point += 0.5
-            elif submit[2] == submit[2] == "CAN_NOT_COMPILE":
+            elif submit[2] == "CAN_NOT_COMPILE":
                 base_point += 0.25
+            elif submit[2] == "DIRECT_OUTPUT":
+                base_point += 0
 
         # 基本点数計算
         base_rating = base_point / required_issue_count * 100
