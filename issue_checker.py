@@ -2,7 +2,6 @@ import subprocess
 import re
 import os
 import magic
-import time
 # pip install python-magic-bin
 
 
@@ -20,13 +19,13 @@ class IssueChecker:
         if 'skip_direct_output_check' not in check_code:
             # 出力例をそのままprintfするやつをしばくやつ
             with open(filepath) as f:
-                code = f.read()
+                code = exclude_comments(f.read())
                 #  オプションがあった場合標準出力結果から文字を除外する
                 if 'exclude' in check_code:
                     for char in check_code["exclude"]:
-                        code = code.replace(char, '')
+                        excluded_code = code.replace(char, '')
                 #  正規表現にて標準出力を検証
-                if self.check_stdout(code, check_code["stdout_regex"]):
+                if self.check_stdout(excluded_code, check_code["stdout_regex"]):
                     return {
                         "result": False,
                         "status_code": "DIRECT_OUTPUT",
@@ -79,6 +78,17 @@ class IssueChecker:
                 "output": "",
             }
 
+        except UnicodeDecodeError as e:
+            with open(filepath) as f:
+                # コンパイル可能だが不適切なコード
+                # 基本的にIndexOutOfBoundsExceptionが該当
+                code = f.read()
+                return {
+                    "result": False,
+                    "status_code": "WRONG_CODE",
+                    "output": code,
+                }
+
     @ classmethod
     def check_stdout(self, output, regex):
         pattern = re.compile(rf'{regex}')
@@ -121,3 +131,26 @@ def run_c_code(input):
         timeout=10,
         stdout=subprocess.PIPE,
     )
+
+
+def exclude_comments(code):
+    # コメントを除外する
+    # コメントはC言語のコードには含まれないので、そのまま残す
+    array_code = code.split("\n")
+    result = []
+    comment_start_flag = False
+    for line in array_code:
+        if line.find("//") != -1:
+            index = line.find("//")
+            result.append(line[:index])
+            continue
+        if not line.find("*/"):
+            comment_start_flag = False
+            continue
+        if not line.find("/*"):
+            comment_start_flag = True
+            continue
+        if comment_start_flag:
+            continue
+        result.append(line)
+    return "\n".join(result)
