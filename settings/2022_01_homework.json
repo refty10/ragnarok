@@ -1,0 +1,29 @@
+{
+  "dir_path": "data/2022_01_homework",
+  "subject": {
+    "id": "01_homework",
+    "title": "第1回_課題"
+  },
+  "required_issue_count": 1,
+  "issues": [
+    {
+      "id": "01_issue1",
+      "title": "issue1",
+      "filename_regex": ".*issue1.*.c",
+      "check_code": {
+        "stdout_regex": ".*",
+        "skip_direct_output_check": true
+      }
+    },
+
+    {
+      "id": "01_issue2",
+      "title": "issue2",
+      "filename_regex": ".*issue2.*.c",
+      "check_code": {
+        "stdout_regex": ".*[2２].*",
+        "skip_direct_output_check": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+    "dir_path": "data/2022_09_homework",
+    "subject": {
+      "id": "09_homework",
+      "title": "第9回_課題"
+    },
+    "required_issue_count": 1,
+    "issues": [
+      {
+        "id": "09_issue1",
+        "title": "09_issue1",
+        "filename_regex": ".*_issue1.*.c",
+        "check_code": {
+          "stdin": ["10","0","5","1","16","5"],
+          "exclude": ["\n", " ", "　"],
+          "stdout_regex": ".*(=|:)9.*(=|:)-16.*(=|:)0"
+        }
+      },{
+        "id": "09_challenge1",
+        "title": "09_challenge1",
+        "filename_regex": ".*_challenge1.*.c",
+        "check_code": {
+          "stdin": ["1 + 6 - 1 + 1 - 3 - 6 =\n"],
+          "exclude": ["\n", " ", "　"],
+          "stdout_regex": ".*-2",
+          "skip_direct_output_check": true
+        }
+      },{
+        "id": "09_challenge2",
+        "title": "09_challenge2",
+        "filename_regex": ".*_challenge2.*.c",
+        "check_code": {
+          "stdin": ["10 + 123 - 14 - 1 - 0 + 21 =\n"],
+          "exclude": ["\n", " ", "　"],
+          "stdout_regex": ".*139",
+          "skip_direct_output_check": true
+        }
+      }
+    ]
+  }

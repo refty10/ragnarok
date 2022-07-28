@@ -1,0 +1,51 @@
+{
+  "dir_path": "data/2022_04_homework",
+  "subject": {
+    "id": "04_homework",
+    "title": "第4回_課題"
+  },
+  "required_issue_count": 2,
+  "issues": [
+    {
+      "id": "04_issue1",
+      "title": "04_issue1",
+      "filename_regex": ".*04.*issue.*1.*.c",
+      "check_code": {
+        "exclude": ["\n", " ", "　"],
+        "stdin": ["200","100"],
+        "stdout_regex": ".*90.*25.*"
+      }
+    },
+    {
+      "id": "04_issue2",
+      "title": "04_issue2",
+      "filename_regex": ".*04.*issue.*2.*.c",
+      "check_code": {
+        "skip_direct_output_check": true,
+        "exclude": ["\n", " ", "　"],
+        "stdin": ["404"],
+        "stdout_regex": ".*even.*"
+      }
+    },
+    {
+      "id": "04_challenge1",
+      "title": "04_challenge1",
+      "filename_regex": ".*04.*challenge.*1.*.c",
+      "check_code": {
+        "exclude": ["\n", " ", "　"],
+        "stdin": ["40"],
+        "stdout_regex": ".*040.*"
+      }
+    },
+    {
+      "id": "04_challenge2",
+      "title": "04_challenge2",
+      "filename_regex": ".*04.*challenge.*2.*.c",
+      "check_code": {
+        "exclude": ["\n", " ", "　"],
+        "stdin": ["20","60"],
+        "stdout_regex": ".*10.*10.*"
+      }
+    }
+  ]
+}

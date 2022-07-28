@@ -1,0 +1,118 @@
+{
+  "dir_path": "data/2022_05_practice",
+  "subject": {
+    "id": "05_practice",
+    "title": "第5回_演習問題"
+  },
+  "required_issue_count": 10,
+  "issues": [
+    {
+      "id": "05_01",
+      "title": "05_01_if1",
+      "filename_regex": ".*_01.*.c",
+      "check_code": {
+        "stdin": ["4"],
+        "exclude": ["\n", " ", "　"],
+        "stdout_regex": ".*aは正の値です.*",
+        "skip_direct_output_check": true
+      }
+    },
+    {
+      "id": "05_02",
+      "title": "05_02_if2",
+      "filename_regex": ".*_02.*.c",
+      "check_code": {
+        "stdin": ["6", "5"],
+        "exclude": ["\n", " ", "　"],
+        "stdout_regex": ".*計算終了.*",
+        "skip_direct_output_check": true
+      }
+    },
+    {
+      "id": "05_03",
+      "title": "05_03_ifelse1",
+      "filename_regex": ".*_03.*.c",
+      "check_code": {
+        "stdin": ["0"],
+        "exclude": ["\n", " ", "　"],
+        "stdout_regex": ".*aは正の値もしくは(0|０)です.*",
+        "skip_direct_output_check": true
+      }
+    },
+    {
+      "id": "05_04",
+      "title": "05_04_ifelse2",
+      "filename_regex": ".*_04.*.c",
+      "check_code": {
+        "stdin": ["5", "5"],
+        "exclude": ["\n", " ", "　"],
+        "stdout_regex": ".*aはb以上です.*",
+        "skip_direct_output_check": true
+      }
+    },
+    {
+      "id": "05_05",
+      "title": "05_05_ifelseif1",
+      "filename_regex": ".*_05.*.c",
+      "check_code": {
+        "stdin": ["0", "500"],
+        "exclude": ["\n", " ", "　"],
+        "stdout_regex": ".*aは(0|０)です.*",
+        "skip_direct_output_check": true
+      }
+    },
+    {
+      "id": "05_06",
+      "title": "05_06_compare",
+      "filename_regex": ".*_06.*.c",
+      "check_code": {
+        "stdin": ["4", "5"],
+        "exclude": ["\n", " ", "　"],
+        "stdout_regex": ".*a<b.*",
+        "skip_direct_output_check": true
+      }
+    },
+    {
+      "id": "05_07",
+      "title": "05_07_ifand",
+      "filename_regex": ".*_07.*.c",
+      "check_code": {
+        "stdin": ["800", "-200"],
+        "exclude": ["\n", " ", "　"],
+        "stdout_regex": ".*aとbのどちらかは負もしくは(0|０)です.*",
+        "skip_direct_output_check": true
+      }
+    },
+    {
+      "id": "05_08",
+      "title": "05_08_nested",
+      "filename_regex": ".*_08.*.c",
+      "check_code": {
+        "stdin": ["800", "-200"],
+        "exclude": ["\n", " ", "　"],
+        "stdout_regex": ".*(C|c).*",
+        "skip_direct_output_check": true
+      }
+    },
+    {
+      "id": "05_09",
+      "title": "05_09_calcFor",
+      "filename_regex": ".*_09.*.c",
+      "check_code": {
+        "exclude": ["\n", " ", "　"],
+        "stdout_regex": ".*(55|５５).*",
+        "skip_direct_output_check": true
+      }
+    },
+    {
+      "id": "05_10",
+      "title": "05_10_hello1000",
+      "filename_regex": ".*_10.*.c",
+      "check_code": {
+        "exclude": ["\n", " ", "　"],
+        "stdout_regex": ".*",
+        "skip_direct_output_check": true
+      }
+    }
+  ]
+}

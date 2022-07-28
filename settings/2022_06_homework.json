@@ -1,0 +1,30 @@
+{
+  "dir_path": "data/2022_06_homework",
+  "subject": {
+    "id": "06_homework",
+    "title": "第6回_課題"
+  },
+  "required_issue_count": 1,
+  "issues": [
+    {
+      "id": "06_issue1",
+      "title": "06_issue1",
+      "filename_regex": ".*06_issue1.*.c",
+      "check_code": {
+        "stdin": ["7", "164", "171", "173", "177", "175", "178", "172"],
+        "exclude": ["\n", " ", "　"],
+        "stdout_regex": "平均身長(:|：)172.857143"
+      }
+    },
+    {
+      "id": "06_challenge",
+      "title": "06_challenge",
+      "filename_regex": ".*06_challenge.*.c",
+      "check_code": {
+        "stdin": ["925577"],
+        "stdout_regex": "素数です",
+        "skip_direct_output_check": true
+      }
+    }
+  ]
+}

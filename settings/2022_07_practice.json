@@ -1,0 +1,102 @@
+{
+  "dir_path": "data/2022_07_practice",
+  "subject": {
+    "id": "07_practice",
+    "title": "第7回_演習問題"
+  },
+  "required_issue_count": 9,
+  "issues": [
+    {
+      "id": "07_01",
+      "title": "swap",
+      "filename_regex": ".*_01.*.c",
+      "check_code": {
+        "exclude": ["\n", " ", "　"],
+        "stdin": ["3", "4"],
+        "stdout_regex": ".*(4.*3|４.*３).*",
+        "skip_direct_output_check": true
+      }
+    },
+    {
+      "id": "07_02",
+      "title": "swap2",
+      "filename_regex": ".*_02.*.c",
+      "check_code": {
+        "exclude": ["\n", " ", "　"],
+        "stdin": ["7", "5"],
+        "stdout_regex": ".*(5.*7|５.*７).*"
+      }
+    },
+    {
+      "id": "07_03",
+      "title": "swap3",
+      "filename_regex": ".*_03.*.c",
+      "check_code": {
+        "exclude": ["\n", " ", "　"],
+        "stdin": ["6", "5", "7"],
+        "stdout_regex": ".*(5.*6.*7|５.*６.*７).*"
+      }
+    },
+    {
+      "id": "07_04",
+      "title": "countup",
+      "filename_regex": ".*_04.*.c",
+      "check_code": {
+        "exclude": ["\n", " ", "　"],
+        "stdin": ["9"],
+        "stdout_regex": ".*(123456789|１２３４５６７８９).*"
+      }
+    },
+    {
+      "id": "07_05",
+      "title": "countdown",
+      "filename_regex": ".*_05.*.c",
+      "check_code": {
+        "exclude": ["\n", " ", "　"],
+        "stdin": ["10"],
+        "stdout_regex": ".*(987654321|９８７６５４３２１).*"
+      }
+    },
+    {
+      "id": "07_06",
+      "title": "fact",
+      "filename_regex": ".*_06.*.c",
+      "check_code": {
+        "exclude": ["\n", " ", "　"],
+        "stdin": ["3", "5"],
+        "stdout_regex": ".*(243|２４３).*"
+      }
+    },
+    {
+      "id": "07_07",
+      "title": "biggest",
+      "filename_regex": ".*_07.*.c",
+      "check_code": {
+        "exclude": ["\n", " ", "　"],
+        "stdin": ["55", "2", "100", "5", "23"],
+        "stdout_regex": ".*(100|１００).*",
+        "skip_direct_output_check": true
+      }
+    },
+    {
+      "id": "07_08",
+      "title": "qq3",
+      "filename_regex": ".*_08.*.c",
+      "check_code": {
+        "exclude": ["\n", " ", "　"],
+        "stdout_regex": ".*1234567892468101214161836912151821242748121620242832365101520253035404561218243036424854714212835424956638162432404856647291827364554637281.*"
+      }
+    },
+    {
+      "id": "07_09",
+      "title": "ways",
+      "filename_regex": ".*_09.*.c",
+      "check_code": {
+        "exclude": ["\n", " ", "　"],
+        "stdin": ["6", "7"],
+        "stdout_regex": ".*(15|１５).*",
+        "skip_direct_output_check": true
+      }
+    }
+  ]
+}

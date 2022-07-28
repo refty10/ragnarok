@@ -1,0 +1,71 @@
+{
+  "dir_path": "data/2022_04_practice",
+  "subject": {
+    "id": "04_practice",
+    "title": "第4回_演習問題"
+  },
+  "required_issue_count": 6,
+  "issues": [
+    {
+      "id": "04_01",
+      "title": "04_01_scan",
+      "filename_regex": ".*_01.*.c",
+      "check_code": {
+        "exclude": ["\n", " ", "　"],
+        "stdin": ["404"],
+        "stdout_regex": ".*x.*x.*=.*404.*"
+      }
+    },
+    {
+      "id": "04_02",
+      "title": "04_02_rectangle",
+      "filename_regex": ".*_02.*.c",
+      "check_code": {
+        "exclude": ["\n", " ", "　"],
+        "stdin": ["3.0", "7.5"],
+        "stdout_regex": ".*width.*height.*area.*=.*22.5.*"
+      }
+    },
+    {
+      "id": "04_03",
+      "title": "04_03_roundoff",
+      "filename_regex": ".*_03.*.c",
+      "check_code": {
+        "exclude": ["\n", " ", "　"],
+        "stdin": ["11.9"],
+        "stdout_regex": ".*dx.*dx.*/.*2.*=.*5.95.*nx.*=.*11.*nx.*/.*2.*=.*5.*"
+      }
+    },
+    {
+      "id": "04_04",
+      "title": "04_04_onvert",
+      "filename_regex": ".*_04.*.c",
+      "check_code": {
+        "exclude": ["\n", " ", "　"],
+        "stdin": ["8 3"],
+        "stdout_regex": ".*nx.*ny.*nx.*/.*ny.*=.*2.*dx.*/.*ny.*=.*2.666667.*nx.*/.*dy.*=.*2.666667.*"
+      }
+    },
+    {
+      "id": "04_05",
+      "title": "04_05_average",
+      "filename_regex": ".*_05.*.c",
+      "check_code": {
+        "exclude": ["\n", " ", "　"],
+        "stdin": ["314","159","26"],
+        "stdout_regex": ".*166.333.*"
+      }
+    },
+    {
+      "id": "04_06",
+      "title": "04_06_if1",
+      "filename_regex": ".*_06.*.c",
+      "check_code": {
+        "skip_direct_output_check": true,
+        "exclude": ["\n", " ", "　"],
+        "stdin": ["1"],
+        "stdout_regex": ".*a?.*aは正の値です.*"
+      }
+    }
+  ]
+}

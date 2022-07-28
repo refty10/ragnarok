@@ -1,0 +1,70 @@
+{
+    "dir_path": "data/2022_09_practice",
+    "subject": {
+      "id": "09_practice",
+      "title": "第9回_演習問題"
+    },
+    "required_issue_count": 6,
+    "issues": [
+      {
+        "id": "09_01",
+        "title": "if1",
+        "filename_regex": ".*_01.*.c",
+        "check_code": {
+          "stdin": ["-1"],
+          "exclude": ["\n", " ", "　"],
+          "stdout_regex": ".*(D|d)efault.*",
+          "skip_direct_output_check": true
+        }
+      },
+      {
+        "id": "09_02",
+        "title": "switch2",
+        "filename_regex": ".*_02.*.c",
+        "check_code": {
+          "stdin": ["WTF are you looking at?\n"],
+          "exclude": [" ","　"],
+          "stdout_regex": ".*WTF\nare\nyou\nlooking\nat\\?"
+        }
+      },
+      {
+        "id": "09_03",
+        "title": "switch3",
+        "filename_regex": ".*_03.*.c",
+        "check_code": {
+          "stdin": ["2.2","3"],
+          "exclude": ["\n", " ", "　"],
+          "stdout_regex": ".*10.648.*"
+        }
+      },
+      {
+        "id": "09_04",
+        "title": "arraysum",
+        "filename_regex": ".*_04.*.c",
+        "check_code": {
+          "exclude": ["\n", " ", "　"],
+          "stdout_regex": ".*155"
+        }
+      },
+      {
+        "id": "09_05",
+        "title": "arrayloop",
+        "filename_regex": ".*_05.*.c",
+        "check_code": {
+          "exclude": [" ", "　"],
+          "stdout_regex": "array\\[0\\](:|=)0\n(.*\n){98}array\\[99\\](:|=)99\n"
+        }
+      },
+      {
+        "id": "09_06",
+        "title": "reverse",
+        "filename_regex": ".*_06.*.c",
+        "check_code": {
+          "stdin": ["4","5","1","9","11"],
+          "exclude": ["\n", " ", "　"],
+          "stdout_regex": ".*11.*9.*1.*5.*4",
+          "skip_direct_output_check": true
+        }
+      }
+    ]
+  }

@@ -1,0 +1,20 @@
+{
+  "dir_path": "data/2022_12_homework",
+  "subject": {
+    "id": "12_homework",
+    "title": "第12回_課題"
+  },
+  "required_issue_count": 1,
+  "issues": [
+    {
+      "id": "12_issue1",
+      "title": "12_issue1",
+      "filename_regex": ".*12_issue1.*.c",
+      "check_code": {
+        "stdin": ["11"],
+        "exclude": ["\n", " ", "　"],
+        "stdout_regex": "39916800"
+      }
+    }
+  ]
+}

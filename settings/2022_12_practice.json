@@ -1,0 +1,88 @@
+{
+  "dir_path": "data/2022_12_practice",
+  "subject": {
+    "id": "12_practice",
+    "title": "第12回_演習問題"
+  },
+  "required_issue_count": 8,
+  "issues": [
+    {
+      "id": "12_01",
+      "title": "string",
+      "filename_regex": ".*_01.*.c",
+      "check_code": {
+        "stdin": ["MomotaroZZ"],
+        "stdout_regex": "MomotaroZZ"
+      }
+    },
+    {
+      "id": "12_02",
+      "title": "heightWeight",
+      "filename_regex": ".*_02.*.c",
+      "check_code": {
+        "exclude": [" ", "\n", "　"],
+        "stdout_regex": "1人目の身長と体重は170802人目の身長と体重は160503人目の身長と体重は18070"
+      }
+    },
+    {
+      "id": "12_03",
+      "title": "heightWeight2",
+      "filename_regex": ".*_03.*.c",
+      "check_code": {
+        "stdin": ["170", "47", "170", "48", "174", "55"],
+        "exclude": [" ", "\n", "　"],
+        "stdout_regex": "1人目の身長と体重は170472人目の身長と体重は170483人目の身長と体重は17455"
+      }
+    },
+    {
+      "id": "12_04",
+      "title": "heightWeight3",
+      "filename_regex": ".*_04.*.c",
+      "check_code": {
+        "stdin": ["170", "47", "170", "48", "174", "55"],
+        "exclude": [" ", "\n", "　"],
+        "stdout_regex": "1人目の身長と体重は170472人目の身長と体重は170483人目の身長と体重は17455"
+      }
+    },
+    {
+      "id": "12_05",
+      "title": "compare",
+      "filename_regex": ".*_05.*.c",
+      "check_code": {
+        "stdin": ["945", "812"],
+        "exclude": [" ", "\n", "　"],
+        "stdout_regex": "大きい方の値は945"
+      }
+    },
+    {
+      "id": "12_06",
+      "title": "comparefunc",
+      "filename_regex": ".*_06.*.c",
+      "check_code": {
+        "stdin": ["945", "812"],
+        "exclude": [" ", "\n", "　"],
+        "stdout_regex": "大きい方の値は945"
+      }
+    },
+    {
+      "id": "12_07",
+      "title": "addfunc",
+      "filename_regex": ".*_07.*.c",
+      "check_code": {
+        "stdin": ["351", "426"],
+        "exclude": [" ", "\n", "　"],
+        "stdout_regex": "和は777"
+      }
+    },
+    {
+      "id": "12_08",
+      "title": "sumfunc",
+      "filename_regex": ".*_08.*.c",
+      "check_code": {
+        "stdin": ["251"],
+        "exclude": [" ", "\n", "　"],
+        "stdout_regex": "1から251までの和は31626"
+      }
+    }
+  ]
+}

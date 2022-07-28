@@ -1,0 +1,85 @@
+{
+  "dir_path": "data/2022_11_practice",
+  "subject": {
+    "id": "11_practice",
+    "title": "第11回_演習問題"
+  },
+  "required_issue_count": 7,
+  "issues": [
+    {
+      "id": "11_01",
+      "title": "11_01_string1",
+      "filename_regex": ".*_01.*.c",
+      "check_code": {
+        "exclude": ["\n", " ", "　"],
+        "stdout_regex": "文字列:abcde.*",
+        "skip_direct_output_check": true
+      }
+    },
+    {
+      "id": "11_02",
+      "title": "11_02_string2",
+      "filename_regex": ".*_02.*.c",
+      "check_code": {
+        "stdin": ["abccba"],
+        "exclude": ["\n", " ", "　"],
+        "stdout_regex": ".*abccba.*",
+        "skip_direct_output_check": true
+      }
+    },
+    {
+      "id": "11_03",
+      "title": "11_03_dispstr1",
+      "filename_regex": ".*_03.*.c",
+      "check_code": {
+        "exclude": ["\n", " ", "　"],
+        "stdout_regex": ".*abcde.*",
+        "skip_direct_output_check": true
+      }
+    },
+    {
+      "id": "11_04",
+      "title": "11_04_dispstr2",
+      "filename_regex": ".*_04_dispstr2.c",
+      "check_code": {
+        "stdin": ["abccba"],
+        "exclude": ["\n", " ", "　"],
+        "stdout_regex": ".*abccba.*",
+        "skip_direct_output_check": true
+      }
+    },
+    {
+      "id": "11_05",
+      "title": "11_04_dispstr2w",
+      "filename_regex": ".*_04_dispstr2w.c",
+      "check_code": {
+        "stdin": ["abccba"],
+        "exclude": ["\n", " ", "　"],
+        "stdout_regex": ".*abccba.*",
+        "skip_direct_output_check": true
+      }
+    },
+    {
+      "id": "11_06",
+      "title": "11_05_scan_rev",
+      "filename_regex": ".*_05.*.c",
+      "check_code": {
+        "stdin": ["abca"],
+        "exclude": ["\n", " ", "　"],
+        "stdout_regex": ".*acba.*",
+        "skip_direct_output_check": true
+      }
+    },
+    {
+      "id": "11_07",
+      "title": "11_06_countA",
+      "filename_regex": ".*_06.*.c",
+      "check_code": {
+        "stdin": ["aiAiai"],
+        "exclude": ["\n", " ", "　"],
+        "stdout_regex": ".*2.*",
+        "skip_direct_output_check": true
+      }
+    }
+  ]
+}

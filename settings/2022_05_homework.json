@@ -1,0 +1,32 @@
+{
+  "dir_path": "data/2022_05_homework",
+  "subject": {
+    "id": "05_homework",
+    "title": "第5回_課題"
+  },
+  "required_issue_count": 2,
+  "issues": [
+    {
+      "id": "05_issue1",
+      "title": "05_issue1",
+      "filename_regex": ".*_issue1.*.c",
+      "check_code": {
+        "stdin": ["8"],
+        "exclude": ["\n", " ", "　"],
+        "stdout_regex": "x?(2|２)の倍数.*(3|３)の倍数では.*",
+        "skip_direct_output_check": true
+      }
+    },
+    {
+      "id": "05_challenge1",
+      "title": "05_challenge1",
+      "filename_regex": ".*_challenge1.*.c",
+      "check_code": {
+        "stdin": ["6", "0"],
+        "exclude": ["\n", " ", "　"],
+        "stdout_regex": ".*診察.行.*せん",
+        "skip_direct_output_check": true
+      }
+    }
+  ]
+}

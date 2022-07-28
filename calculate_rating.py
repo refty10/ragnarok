@@ -76,7 +76,9 @@ def setting_selector():
 
     for setting in glob(f"{settings_path}*.json"):
         settings.append(setting[len(settings_path):])
-        print(setting[len(settings_path):])
+
+    for setting in sorted(settings):
+        print(setting)
 
     while True:
         print("> > Please Select Setting", end=" : ")

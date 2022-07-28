@@ -1,0 +1,108 @@
+{
+    "dir_path": "data/2022_03_practice",
+    "subject": {
+      "id": "03_practice",
+      "title": "第3回_演習問題"
+    },
+    "required_issue_count": 10,
+    "issues": [
+      {
+        "id": "03_01",
+        "title": "add",
+        "filename_regex": ".*_01.*.c",
+        "check_code": {
+          "exclude": ["\n", " ", "　"],
+          "stdout_regex": ".*=5"
+        }
+      },
+      {
+        "id": "03_02",
+        "title": "sub",
+        "filename_regex": ".*_02.*.c",
+        "check_code": {
+          "exclude": ["\n", " ", "　"],
+          "stdout_regex": ".*=2"
+        }
+      },
+      {
+        "id": "03_03",
+        "title": "calc",
+        "filename_regex": ".*_03.*.c",
+        "check_code": {
+          "exclude": ["\n", " ", "　"],
+          "stdout_regex": "3.4.2.8=4"
+        }
+      },
+      {
+        "id": "03_04",
+        "title": "scan",
+        "filename_regex": ".*_04.*.c",
+        "check_code": {
+          "stdin": ["10"],
+          "exclude": ["\n", " ", "　"],
+          "stdout_regex": ".*=10"
+        }
+      },
+      {
+        "id": "03_05",
+        "title": "scan2",
+        "filename_regex": ".*_05.*.c",
+        "check_code": {
+          "stdin": ["1 7"],
+          "exclude": ["\n", " ", "　"],
+          "stdout_regex": ".*=1\\..*=7.*"
+        }
+      },
+      {
+        "id": "03_06",
+        "title": "scancalc",
+        "filename_regex": ".*_06.*.c",
+        "check_code": {
+          "stdin": ["5 3"],
+          "exclude": ["\n", " ", "　"],
+          "stdout_regex": ".*=8.*=2.*=15.*=1"
+        }
+      },
+      {
+        "id": "03_07",
+        "title": "rectangle",
+        "filename_regex": ".*_07.*.c",
+        "check_code": {
+          "stdin": ["4 6"],
+          "exclude": ["\n", " ", "　"],
+          "stdout_regex": ".*=20.*=24"
+        }
+      },
+      {
+        "id": "03_08",
+        "title": "remainder",
+        "filename_regex": ".*_08.*.c",
+        "check_code": {
+          "stdin": ["8 4"],
+          "exclude": ["\n", " ", "　","の余りは"],
+          "stdout_regex": ".*0",
+          "skip_direct_output_check": true
+        }
+      },
+      {
+        "id": "03_09",
+        "title": "xxx",
+        "filename_regex": ".*_09.*.c",
+        "check_code": {
+          "stdin": ["10"],
+          "exclude": ["\n", " ", "　"],
+          "stdout_regex": ".*=10.*=20.*=30"
+        }
+      },
+      {
+        "id": "03_10",
+        "title": "vector",
+        "filename_regex": ".*_10.*.c",
+        "check_code": {
+          "stdin": ["(5, 2)"],
+          "exclude": ["\n", " ", "　"],
+          "stdout_regex": ".*(10,4)"
+        }
+      }
+    ]
+  }

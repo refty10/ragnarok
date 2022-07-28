@@ -1,0 +1,79 @@
+{
+  "dir_path": "data/2022_10_practice",
+  "subject": {
+    "id": "010_practice",
+    "title": "第10回_演習問題"
+  },
+  "required_issue_count": 7,
+  "issues": [
+    {
+      "id": "10_01",
+      "title": "10_01_arraysum",
+      "filename_regex": ".*_01.*.c",
+      "check_code": {
+        "exclude": ["\n", " ", "　"],
+        "stdout_regex": ".*30.*"
+      }
+    },
+    {
+      "id": "10_02",
+      "title": "10_02_arrayinput",
+      "filename_regex": ".*_02.*.c",
+      "check_code": {
+        "exclude": ["\n", " ", "　"],
+        "stdin": ["1", "3", "5", "7", "11"],
+        "stdout_regex": ".*5.4.*"
+      }
+    },
+    {
+      "id": "10_03",
+      "title": "10_03_arraycopy",
+      "filename_regex": ".*_03.*.c",
+      "check_code": {
+        "exclude": ["\n", " ", "　"],
+        "stdin": ["10", "30", "50", "70", "110"],
+        "stdout_regex": ".*:0.1.*:0.3.*:0.5.*:0.7.*:1.1.*"
+      }
+    },
+    {
+      "id": "10_04",
+      "title": "10_04_arrayswap",
+      "filename_regex": ".*_04.*.c",
+      "check_code": {
+        "exclude": ["\n", " ", "　"],
+        "stdin": ["1", "4"],
+        "stdout_regex": ".*[0].*4.*[1].*2.*[2].*3.*[3].*1.*[4].*5.*"
+      }
+    },
+    {
+      "id": "10_05",
+      "title": "10_05_arrayminmax",
+      "filename_regex": ".*_05.*.c",
+      "check_code": {
+        "exclude": ["\n", " ", "　"],
+        "stdin": ["110","999","140","100","500"],
+        "stdout_regex": ".*100.*999.*"
+      }
+    },
+    {
+      "id": "10_06",
+      "title": "10_06_arraythreshold",
+      "filename_regex": ".*_06.*.c",
+      "check_code": {
+        "exclude": ["\n", " ", "　"],
+        "stdin": ["110","999","140","100","500"],
+        "stdout_regex": ".*2人目の身長.*999.*5人目の身長.*500.*"
+      }
+    },
+    {
+      "id": "10_07",
+      "title": "10_07_arraycomplex",
+      "filename_regex": ".*_07.*.c",
+      "check_code": {
+        "exclude": ["\n", " ", "　"],
+        "stdin": ["172 55","167 72","178 72","168 69","152 55"],
+        "stdout_regex": ".*2.*BMI.*25.816630.*標準体重.*11.700000.*4.*BMI.*24.447279.*標準体重.*7.800000.*5.*BMI.*23.805402.*標準体重.*8.200000.*"
+      }
+    }
+  ]
+}

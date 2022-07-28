@@ -1,0 +1,104 @@
+{
+  "dir_path": "data/2022_06_practice",
+  "subject": {
+    "id": "06_practice",
+    "title": "第6回_演習問題"
+  },
+  "required_issue_count": 10,
+  "issues": [
+    {
+      "id": "06_01",
+      "title": "if",
+      "filename_regex": ".*_01.*.c",
+      "check_code": {
+        "stdin": ["-632"],
+        "stdout_regex": "aは負の値です",
+        "skip_direct_output_check": true
+      }
+    },
+    {
+      "id": "06_02",
+      "title": "hello10",
+      "filename_regex": ".*_02.*.c",
+      "check_code": {
+        "exclude": ["\n", "　", "hello", "world"],
+        "stdout_regex": "(Hello, World!){10}"
+      }
+    },
+    {
+      "id": "06_03",
+      "title": "loopNum",
+      "filename_regex": ".*_03.*.c",
+      "check_code": {
+        "stdin": ["25"],
+        "exclude": ["\n", "　", "hello", "world"],
+        "stdout_regex": "(Hello, World!){25}"
+      }
+    },
+    {
+      "id": "06_04",
+      "title": "calcFor",
+      "filename_regex": ".*_04.*.c",
+      "check_code": {
+        "exclude": ["\n", " ", "　"],
+        "stdout_regex": "^55$"
+      }
+    },
+    {
+      "id": "06_05",
+      "title": "scanLoop",
+      "filename_regex": ".*_05.*.c",
+      "check_code": {
+        "stdin": ["11", "7", "76", "24", "9"],
+        "exclude": ["\n", " ", "　"],
+        "stdout_regex": ".*1:11.*2:7.*3:76.*4:24.*5:9"
+      }
+    },
+    {
+      "id": "06_06",
+      "title": "even1",
+      "filename_regex": ".*_06.*.c",
+      "check_code": {
+        "exclude": ["\n", " ", "　"],
+        "stdout_regex": "0246810"
+      }
+    },
+    {
+      "id": "06_07",
+      "title": "odd1",
+      "filename_regex": ".*_07.*.c",
+      "check_code": {
+        "exclude": ["\n", " ", "　"],
+        "stdout_regex": "13579"
+      }
+    },
+    {
+      "id": "06_08",
+      "title": "even2",
+      "filename_regex": ".*_08.*.c",
+      "check_code": {
+        "exclude": ["\n", " ", "　"],
+        "stdout_regex": "0246810"
+      }
+    },
+    {
+      "id": "06_09",
+      "title": "qq1",
+      "filename_regex": ".*_09.*.c",
+      "check_code": {
+        "exclude": ["\n", " ", "　"],
+        "stdout_regex": "^(?!.*10x1=).*(?=1x1=11x2=21x3=31x4=41x5=51x6=61x7=71x8=81x9=92x1=22x2=42x3=62x4=82x5=102x6=122x7=142x8=162x9=183x1=33x2=63x3=93x4=123x5=153x6=183x7=213x8=243x9=274x1=44x2=84x3=124x4=164x5=204x6=244x7=284x8=324x9=365x1=55x2=105x3=155x4=205x5=255x6=305x7=355x8=405x9=456x1=66x2=126x3=186x4=246x5=306x6=366x7=426x8=486x9=547x1=77x2=147x3=217x4=287x5=357x6=427x7=497x8=567x9=638x1=88x2=168x3=248x4=328x5=408x6=488x7=568x8=648x9=729x1=99x2=189x3=279x4=369x5=459x6=549x7=639x8=729x9=81).*$"
+      }
+    },
+    {
+      "id": "06_010",
+      "title": "qq2",
+      "filename_regex": ".*_10.*.c",
+      "check_code": {
+        "stdin": ["9"],
+        "exclude": ["\n", " ", "　"],
+        "stdout_regex": "^(?!.*12x1=).*(?=9x1=99x2=189x3=279x4=369x5=459x6=549x7=639x8=729x9=8110x1=1010x2=2010x3=3010x4=4010x5=5010x6=6010x7=7010x8=8010x9=9011x1=1111x2=2211x3=3311x4=4411x5=5511x6=6611x7=7711x8=8811x9=99).*$"
+      }
+    }
+  ]
+}

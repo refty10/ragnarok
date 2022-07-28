@@ -1,0 +1,85 @@
+{
+  "dir_path": "data/2022_13_practice",
+  "subject": {
+    "id": "13_practice",
+    "title": "第13回_演習問題"
+  },
+  "required_issue_count": 8,
+  "issues": [
+    {
+      "id": "13_01",
+      "title": "sub",
+      "filename_regex": ".*_01.*.c",
+      "check_code": {
+        "exclude": ["\n", " ", "　"],
+        "stdout_regex": ".*(5-10=-5|５-１０=-５).*"
+      }
+    },
+    {
+      "id": "13_02",
+      "title": "add",
+      "filename_regex": ".*_02.*.c",
+      "check_code": {
+        "exclude": ["\n", " ", "　"],
+        "stdout_regex": ".*(5\\+10=15|５\\+１０=１５).*"
+      }
+    },
+    {
+      "id": "13_03",
+      "title": "print",
+      "filename_regex": ".*_03.*.c",
+      "check_code": {
+        "exclude": ["\n", " ", "　"],
+        "stdout_regex": ".*(12345|１２３４５).*"
+      }
+    },
+    {
+      "id": "13_04",
+      "title": "sin",
+      "filename_regex": ".*_04.*.c",
+      "check_code": {
+        "exclude": ["\n", " ", "　"],
+        "stdin": ["30"],
+        "stdout_regex": ".*sin(.*)=(0.5|０.５).*"
+      }
+    },
+    {
+      "id": "13_05",
+      "title": "sinFunc",
+      "filename_regex": ".*_05.*.c",
+      "check_code": {
+        "exclude": ["\n", " ", "　"],
+        "stdin": ["30"],
+        "stdout_regex": ".*sin(.*)=(0.5|０.５).*"
+      }
+    },
+    {
+      "id": "13_06",
+      "title": "macroTest",
+      "filename_regex": ".*_06.*.c",
+      "check_code": {
+        "exclude": ["\n", " ", "　"],
+        "stdout_regex": ".*(55|５５).*"
+      }
+    },
+    {
+      "id": "13_07",
+      "title": "macroSum",
+      "filename_regex": ".*_07.*.c",
+      "check_code": {
+        "exclude": ["\n", " ", "　"],
+        "stdout_regex": ".*(110|１１０).*"
+      }
+    },
+    {
+      "id": "13_08",
+      "title": "macroHello",
+      "filename_regex": ".*_08.*.c",
+      "check_code": {
+        "exclude": ["\n", " ", "　"],
+        "stdout_regex": ".*Hello,World!.*",
+        "skip_direct_output_check": true
+      }
+    }
+  ]
+}
