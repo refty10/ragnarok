@@ -20,6 +20,8 @@ class IssueChecker:
             # 出力例をそのままprintfするやつをしばくやつ
             with open(filepath) as f:
                 code = exclude_comments(f.read())
+
+                excluded_code = code
                 #  オプションがあった場合標準出力結果から文字を除外する
                 if 'exclude' in check_code:
                     for char in check_code["exclude"]:
